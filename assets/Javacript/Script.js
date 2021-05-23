@@ -72,6 +72,35 @@ clickegoodluck.addEventListener("click" , function (){
         render(answeredQuestionsIndex);
 });
 
+//funtion for random questions
+
+function render(answeredQuestionsIndex) {
+    //clear current data
+    testQuestions.innerHTML = "";
+    createtestList.innerHtml = "";
+
+    //random questions array
+
+    for (var i= 0; i < testQuestions.clientHeight; i++) {
+
+        var studentQuestion = testQuestions[answeredQuestionsIndex].title;
+        var studentAnswer = testQuestions[answeredQuestionsIndex].testChoices;
+        testQuestions.textContent = studentQuestion;
+    }
+
+    studentAnswer.forEach(function (newItem) {
+        var listItem = document.createAttribute.Element("button");
+        listItem.textContent =newItem;
+        testQuestions.appendChild(createtestList);
+        createtestList.appendChild(listItem);
+        listItem.addEventListener("click", (compare));
+    })
+}
+//comparing student annswer to correct andswer
+
+  
+
+
 
 
 
