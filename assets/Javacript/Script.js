@@ -98,7 +98,25 @@ function render(answeredQuestionsIndex) {
 }
 //comparing student annswer to correct andswer
 
-  
+  function compare (event) {
+      var myElement = event.target;
+      if (myElement.matches ("button")) {
+          var createDiv = document.createElement("div");
+          createDiv.setAttribute("id", "createDiv");
+
+          //correct answer
+        if(myElement.textContent == testQuestions [answeredQuestionsIndex].answer){
+            score = score + 15;
+            score.El.textContent = "Score" + score;
+            // (correct promp)
+            createDiv.textContent ="Correct!"
+            // (worng Promp)
+            secondsLeft = secondsLeft - incorrect;
+            createDiv.textContent ="Wrong - 10 seconds";
+        }
+      }
+
+  }
 
 
 
