@@ -114,7 +114,17 @@ function render(answeredQuestionsIndex) {
             secondsLeft = secondsLeft - incorrect;
             createDiv.textContent ="Wrong - 10 seconds";
         }
+        answeredQuestionsIndex++;
+
+        if (questionAskedIndex >= testQuestions.length) {
+            finshed();
+            createDiv.textContent = "Good Effort!!";
+        } else {
+            render(answeredQuestionsIndex);
+        }
+        testQuestions.appendC(createDiv);
       }
+      
 
   }
 
