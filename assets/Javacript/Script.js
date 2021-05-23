@@ -124,7 +124,27 @@ function render(answeredQuestionsIndex) {
         }
         testQuestions.appendC(createDiv);
       }
-      
+
+    //Submit page
+
+    function done() {
+        testQuestions.innerHTML ="";
+        timeInterval.innerHTML ="";
+        //header
+        var createH1 = document.createElement("h1");
+        createH1.setAttribute("id", "createH1");
+        createH1.textContent = "Clickers Down";
+        testQuestions.appendChild(createH1);
+        //p tags
+        var createP = document.createElement("p");
+        createH1.setAttribute("id", "createP");
+        testQuestions.appendChild(createP);
+        //show student quiz score
+        var createP2 = document.createElement("p");
+        clearInterval(timeInterval);
+        createP.textContent ="Your Score is: " + score;
+        testQuestions.appendChild(createP);
+    }
 
   }
 
