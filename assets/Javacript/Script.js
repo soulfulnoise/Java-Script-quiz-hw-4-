@@ -184,6 +184,30 @@ function render(answeredQuestionsIndex) {
          document.location.href = "./index.html";
      })
 
+     //using local storage so studnets can add intitals and score
+
+     createSubmit.addEventListener("click", function () {
+         var initials = createInput.value;
+         if (initials === nul) {
+             console.log("Put your name on it.");
+         } else {
+             var finalScore = {
+                 initials: initials,
+                 score: score
+             }
+             console.log(finalScore);
+             var allScores = localStorage.getItem("allScores");
+             if (allScores === null) {
+                 allScores = [];
+             } else {
+                 allScores =JSON.parse(allScores);
+             }
+             allScores.push(finalScore);
+             var newScore =  JSON.stringify(allScores);
+             localStorage.setItem("allScores", newScore);
+         }
+
+});
     }
 
   }
