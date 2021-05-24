@@ -167,6 +167,22 @@ function render(answeredQuestionsIndex) {
         createSubmit.setAttribute("id", "submit");   
         createSubmit.setAttribute("class", "btn-success");    
         createSubmit.textContent = "submit";
+        testQuestions.appendChild(createSubmit);
+
+     //return button
+
+     var createReturn = document.createElement("button");
+     createReturn.setAttribute("type", "history");
+     createReturn.setAttribute("id", "Return");
+     createReturn.setAttribute("class","btn-danger");
+     createReturn.textContent = "Return";
+     testQuestions.appendChild(createReturn);
+
+     //button functionality
+
+     createReturn.addEventListener("click" , function () {
+         document.location.href = "./index.html";
+     })
 
     }
 
