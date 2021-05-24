@@ -143,7 +143,31 @@ function render(answeredQuestionsIndex) {
         var createP2 = document.createElement("p");
         clearInterval(timeInterval);
         createP.textContent ="Your Score is: " + score;
-        testQuestions.appendChild(createP);
+        testQuestions.appendChild(createP2);
+
+        //label:
+        var createLablel = document.createElement("label");
+        createLablel.setAttribute("id", "createLabel");
+        createLablel.textContent = "Enter your initials";
+        createLablel.textContent = "Enter your initials";
+
+        testQuestions.appendChild(createLablel);
+
+        // input area
+        var createInput = document.createElement("input");
+        createInput.setAttribute("type", "text");
+        createInput.setAttribute("id", "initials");
+        createInput.textContent = "";
+        testQuestions.appendChild(createLablel);
+
+        //test Submit button
+
+        var createSubmit = document.createElement("button");
+        createSubmit.setAttribute("type", "submit");
+        createSubmit.setAttribute("id", "submit");   
+        createSubmit.setAttribute("class", "btn-success");    
+        createSubmit.textContent = "submit";
+
     }
 
   }
